@@ -1,0 +1,18 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+*.code-workspace
+
+# Logs
+*.log
+
+# Assets (add your own images — do not commit large files)
+assets/images/*.psd
+assets/images/*.ai
+
+# Environment
+.env
