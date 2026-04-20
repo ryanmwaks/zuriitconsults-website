@@ -97,15 +97,15 @@ animElements.forEach(el => observer.observe(el));
 
 // ─── CONTACT FORM ─────────────────────────────────────────
 const contactForm = document.getElementById('contactForm');
-const FORMSPREE_ID = 'YOUR_FORMSPREE_FORM_ID'; // replace with your Formspree form ID
 
-contactForm.addEventListener('submit', async (e) => {
+contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const firstName = contactForm.firstName.value.trim();
   const email     = contactForm.email.value.trim();
   const message   = contactForm.message.value.trim();
 
+  // Basic validation
   if(!firstName || !email || !message) {
     showFormMessage('Please fill in all required fields.', 'error');
     return;
@@ -116,41 +116,20 @@ contactForm.addEventListener('submit', async (e) => {
     return;
   }
 
+  // Simulate submission (replace with real endpoint when ready)
   const submitBtn = contactForm.querySelector('[type="submit"]');
   submitBtn.disabled = true;
   submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-  try {
-    const payload = {
-      firstName:  contactForm.firstName.value.trim(),
-      lastName:   contactForm.lastName.value.trim(),
-      email:      contactForm.email.value.trim(),
-      phone:      contactForm.phone.value.trim(),
-      service:    contactForm.service.value,
-      message:    contactForm.message.value.trim(),
-    };
-
-    const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify(payload),
-    });
-
-    if(res.ok) {
-      showFormMessage(
-        `Thank you, ${firstName}! Your message has been received. We will get back to you within one business day.`,
-        'success'
-      );
-      contactForm.reset();
-    } else {
-      showFormMessage('Something went wrong. Please email us directly at info@zuriitconsults.co.ke.', 'error');
-    }
-  } catch {
-    showFormMessage('Network error. Please check your connection and try again.', 'error');
-  } finally {
+  setTimeout(() => {
+    showFormMessage(
+      `Thank you, ${firstName}! Your message has been received. We will get back to you within one business day.`,
+      'success'
+    );
+    contactForm.reset();
     submitBtn.disabled = false;
     submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-  }
+  }, 1500);
 });
 
 function showFormMessage(text, type) {
