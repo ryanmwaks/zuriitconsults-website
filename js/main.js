@@ -141,7 +141,7 @@ contactForm.addEventListener('submit', async (e) => {
       );
       contactForm.reset();
     } else {
-      showFormMessage('Something went wrong. Please email us at info@zuriitconsults.co.ke.', 'error');
+      showFormMessage('Something went wrong. Please email us at info@zuriitconsults.com.', 'error');
     }
   } catch {
     showFormMessage('Network error. Please check your connection and try again.', 'error');

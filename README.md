@@ -48,7 +48,7 @@ Any file save triggers a live reload automatically.
 
 Before going live, update these items in `index.html`:
 
-- [x] Official email: `info@zuriitconsults.com` (update `index.html` and `js/main.js`, which still show the old .co.ke address)
+- [x] Official email: `info@zuriitconsults.com`
 - [ ] Update social media links (LinkedIn, Twitter/X, WhatsApp)
 - [ ] Add real project descriptions in the Projects section
 - [ ] Add a real logo image in `assets/images/` and update the navbar
