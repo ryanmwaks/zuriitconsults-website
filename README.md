@@ -48,8 +48,7 @@ Any file save triggers a live reload automatically.
 
 Before going live, update these items in `index.html`:
 
-- [ ] Replace `+254 700 000 000` with real phone number
-- [ ] Replace `info@zuriitconsults.co.ke` with real email
+- [x] Official email: `info@zuriitconsults.com` (update `index.html` and `js/main.js`, which still show the old .co.ke address)
 - [ ] Update social media links (LinkedIn, Twitter/X, WhatsApp)
 - [ ] Add real project descriptions in the Projects section
 - [ ] Add a real logo image in `assets/images/` and update the navbar
@@ -107,7 +106,7 @@ git push -u origin main
 Deployment takes 1–2 minutes after pushing.
 
 ### Step 4 — Custom Domain (optional)
-1. Buy a domain (e.g., `zuriitconsults.co.ke`)
+1. Official domain: `zuriitconsults.com`
 2. In GitHub Pages settings → add custom domain
 3. Add a `CNAME` file to the repo root containing your domain name
 4. Update DNS records at your registrar
@@ -126,4 +125,13 @@ Deployment takes 1–2 minutes after pushing.
 
 ---
 
-*Built for Zuri IT Consults — Nairobi, Kenya*
+---
+
+## Ownership & Licence
+
+The code in this repository is proprietary software of **ZURI IT CONSULTS**. It is published for portfolio and reference purposes only. No licence to copy, modify, redistribute, use commercially or use for AI/ML training is granted; see [LICENSE](LICENSE), [COPYRIGHT](COPYRIGHT) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). To report a vulnerability, see [SECURITY.md](SECURITY.md).
+
+**Developed and maintained by ZURI IT CONSULTS**: *Delivering Secure Digital Systems*
+[www.zuriitconsults.com](https://www.zuriitconsults.com) · info@zuriitconsults.com · +254 710 634 288 · +254 780 634 289
+
+Copyright © 2026 ZURI IT CONSULTS | Ryan Mwakala Njumwa. All rights reserved.
